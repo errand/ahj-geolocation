@@ -1,5 +1,5 @@
-import Trello from './Trello';
+import GeoLocator from './GeoLocator';
 
-const trello = new Trello();
-trello.bindToDOM(document.querySelector('#board'));
-trello.init();
+const geoLocator = new GeoLocator();
+geoLocator.bindToDOM(document.querySelector('#app'));
+geoLocator.init();
