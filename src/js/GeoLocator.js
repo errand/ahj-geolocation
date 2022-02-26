@@ -39,6 +39,7 @@ export default class GeoLocator {
           };
 
           const error = (err) => {
+            this.openModal();
             console.warn(`ERROR(${err.code}): ${err.message}`);
           };
 
@@ -46,6 +47,13 @@ export default class GeoLocator {
         }
       }
     });
+  }
+
+  openModal() {
+    const div = document.createElement('div');
+    div.classList.add('modal');
+    div.innerHTML = '<p>Введите координаты вручную <input type="text" data-id="coordsInput"><button data-id="coordsSubmit">ОК</button>';
+    this.container.appendChild(div);
   }
 
   addMessage(text, latitude, longitude) {
