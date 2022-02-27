@@ -35,6 +35,6 @@ describe('DND', () => {
 
   test('should add valid class to the form', async () => {
     await page.goto(baseUrl);
-    await page.waitForSelector('#board');
+    await page.waitForSelector('#app');
   });
 });
